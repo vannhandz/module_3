@@ -8,24 +8,25 @@ public class Ex6_8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("So nv muon them: ");
-        int nv = sc.nextInt();
+        int dem = 1;
         int check;
-        do{
-            for (int i = 1; i <=nv; i++) {
-                System.out.println("nhan vien: "+i);
-                nhap();
-                System.out.println();
-            }
-            for (int i = 1; i <=nv; i++) {
-                System.out.print("thong tin nhan vien: "+i);
-                xuat();
-                System.out.println();
-            }
-            System.out.print("co muon nhap them nv ? nhap 1 neu co");
-            check= sc.nextInt();
-        }while (check==1);
+        do {
 
+            System.out.println("nhan vien: " + dem);
+            nhap();
+            System.out.println();
+            System.out.print("co muon nhap them nv ? nhap 1 neu co: ");
+            check = sc.nextInt();
+            if (check == 1) {
+                dem++;
+            }
+        } while (check == 1);
 
+        for (int j = 1; j<=dem; j++) {
+            System.out.print("thong tin nhan vien: ");
+            xuat();
+            System.out.println();
+        }
     }
 
     public static void nhap() {
@@ -38,11 +39,12 @@ public class Ex6_8 {
         gender = sc.nextLine();
 
     }
+
     public static void xuat() {
         System.out.println();
-        System.out.println("ten: "+name);
-        System.out.println("tuoi: "+age);
-        System.out.println("gioi tinh: "+gender);
+        System.out.println("ten: " + name);
+        System.out.println("tuoi: " + age);
+        System.out.println("gioi tinh: " + gender);
 
     }
 }
