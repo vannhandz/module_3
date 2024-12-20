@@ -24,6 +24,8 @@ public class Ex7_1 {
         // dôi kí tụ 's' sang hoa
         System.out.println(str.toUpperCase());
         System.out.println(str.toLowerCase());
+
+
     }
 }
 

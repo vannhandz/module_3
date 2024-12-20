@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Ex6_7 {
     static String name;
     static int age;
-    static String gender;
+    static boolean  gender;
 
 
     public static void main(String[] args) {
@@ -23,20 +23,33 @@ public class Ex6_7 {
     }
 
     public static void nhap() {
+        int choose;
+
         Scanner sc = new Scanner(System.in);
         System.out.print("nhap ten: ");
         name = sc.nextLine();
         System.out.print("nhap tuoi: ");
         age = Integer.parseInt(sc.nextLine());
-        System.out.print("gioi tinh: ");
-        gender = sc.nextLine();
+       do {
+           System.out.println("===== Menu =====");
+           System.out.println("1 Nam");
+           System.out.println("2 Nu");
+           System.out.print("moi nhap: ");
+           choose = sc.nextInt();
 
+           if(choose !=1 && choose !=2)
+           {
+               System.out.println("nhap sai");
+           }
+       }while (choose !=1 && choose !=2);
+         gender=choose==1;
     }
     public static void xuat() {
+
         System.out.println();
         System.out.println("ten: "+name);
         System.out.println("tuoi: "+age);
-        System.out.println("gioi tinh: "+gender);
+        System.out.println("gioi tinh: "+(gender ? "Nam" : "Nu"));
 
     }
 }

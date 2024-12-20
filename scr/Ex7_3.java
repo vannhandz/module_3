@@ -7,11 +7,6 @@ public class Ex7_3 {
         String str1 = sc.nextLine();
         System.out.print("nhap chuoi b: ");
         String str2 = sc.nextLine();
-        if(str1.length() < str2.length()) {
-            System.out.println("chuoi 2 lon hon");
-        }else
-        {
-            System.out.println("chuoi 1 lon hon");
-        }
+        System.out.println(str1.equals(str2));
     }
 }
