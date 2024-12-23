@@ -38,7 +38,7 @@ public class Ex12_3 {
     // tim nhan vien
     public static void findName(int n,String str) {
         for (int i = 0; i < n; i++) {
-            if(str.equals(hoTen.get(i)))
+            if(str.equalsIgnoreCase(hoTen.get(i)))
             {
                 output(i);
             }else {

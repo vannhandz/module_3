@@ -19,7 +19,7 @@ public class Ex9_3 {
     private static void findNV(String str)
     {
         for (int i = 0; i < hoTen.length; i++) {
-            if(str.equals(hoTen[i]))
+            if(str.equalsIgnoreCase(hoTen[i]))
             {
                 System.out.println("thong tin nhan vien can tim: ");
                 System.out.println("ho ten nv: "+hoTen[i]);
